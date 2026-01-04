@@ -1,0 +1,227 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{geometry}
+\usepackage{fontspec}
+\usepackage[german]{babel}
+\usepackage{hyperref}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\geometry{a4paper, margin=1in}
+\usepackage{lastpage}
+
+% Define color
+\definecolor{maincolor}{RGB}{38, 139, 210} % charemma.de solarized.dark #268BD2 blue
+\definecolor{background}{RGB}{0, 0, 0} % charemma.de solarized.light #fff white
+\definecolor{textcolor}{RGB}{64, 64, 64} % charemma.de solarized.light #939393 grey
+
+% Set font to Lato Light
+% \setmainfont{Lato}
+\setmainfont[
+    Path = /usr/share/fonts/truetype/lato/,
+    UprightFont = *-Light.ttf,
+    ItalicFont = *-LightItalic.ttf,
+    BoldFont = *-Bold.ttf,
+    BoldItalicFont = *-BoldItalic.ttf
+]{Lato}
+
+% Set section and subsection formatting
+\titleformat{\section}{\large\bfseries\color{maincolor}}{}{0em}{}[]
+\titleformat{\subsection}{\normalsize\bfseries\color{maincolor}}{}{0em}{}
+
+% Set text color
+\color{textcolor}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{\textcolor{maincolor}{\thepage}}
+%\fancyfoot[L]{\textcolor{maincolor}{\thepage} / \textcolor{maincolor}{\pageref{LastPage}}}
+\fancyfoot[R]{Großraum Stuttgart \quad +49 (0) 177 8734354 \quad \href{mailto:me@charemma.de}{me@charemma.de}}
+
+% Zeichne kein rechteck um hyperlink adressen, z.B. in https://xxxx
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maincolor,
+    urlcolor=maincolor,
+    citecolor=maincolor
+}
+
+\begin{document}
+
+\begin{center}
+    {\Huge\color{textcolor}charalambos} \\
+    \vspace{0.1cm}
+    {\Huge\textbf{\color{maincolor}EMMANOUILIDIS}} \\
+    \vspace{0.5cm}
+\end{center}
+
+\vspace{1cm}
+\section*{Profil}
+Erfahrener DevOps und Platform Engineer mit umfassender Expertise in der Implementierung von CI/CD-Pipelines, IT-Automation und IT-Security. Bewährte Fähigkeiten in der Entwicklung und Optimierung von DevOps-Prozessen in hochregulierten Umgebungen. Umfangreiche Erfahrung im Remote-Arbeiten und in der Zusammenarbeit mit interdisziplinären Teams, um kontinuierliche Integration, kontinuierliches Testen und kontinuierliche Bereitstellung zu gewährleisten. Stark in der Einführung von Plattformkonzepten, die Teams zur Autonomie und Skalierbarkeit verhelfen.
+
+\vspace{1cm}
+\section*{Kenntnisse und Fähigkeiten}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Embedded Linux}: Yocto, Buildroot
+    \item \textbf{Build Systems}: Bitbake, CMake, Make
+    \item \textbf{Betriebssysteme}: GNU Linux, macOS, Microsoft Windows, FreeBSD
+    \item \textbf{IT-Automation}: Ansible, Terraform, Pulumi
+    \item \textbf{CI/CD}: GitLab CI, GitHub Actions, Jenkins, Dagger
+    \item \textbf{Programmiersprachen}: Python, Golang, C++, Bash, PowerShell
+    \item \textbf{Container und Orchestrierung}: Docker, Kubernetes, k3s, Vagrant, QEmu
+    \item \textbf{IT-Security}: OWASP, Web Application Security, Bug Bounty
+    \item \textbf{Code Quality und Sicherheitsanalyse}: SonarQube, Coverity
+    \item \textbf{Package Management}: Conan, Pip
+    \item \textbf{Agile Methodologies}: Scrum, Kanban, SAFe
+    \item \textbf{Monitoring und Logging}: Prometheus, Grafana, ELK Stack
+    \item \textbf{IDEs}: Nvim, VS Code
+\end{itemize}
+
+\newpage
+
+\section*{Freiberufliche Tätigkeit}
+
+\subsection*{DevOps / Platform Engineering, Philips Medizin Systeme Böblingen}
+\textit{September 2024 - heute}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Entwicklung, Optimierung und Wartung einer skalierbaren Software-Entwicklungsplattform für Embedded Medical Systems, mit Fokus auf CI/CD, Build- und Deployment-Prozesse
+    \item Implementierung und Pflege von Yocto-Buildsystemen unter Nutzung von KAS, zur Automatisierung und Modularisierung der Embedded-Linux-Entwicklung
+    \item Aufbau und Verwaltung von CI/CD-Pipelines mit GitHub Actions zur Automatisierung von Builds, Tests und Releases
+    \item Verbesserung der Developer Experience (DevEx), durch die Bereitstellung vorkonfigurierter DevContainers für VSCode und Neovim (nvim) mit optimierter Umgebung für Embedded- und CI/CD-Workflows
+    \item Optimierung der Build-Performance und Skalierung der Build-Umgebung zur Reduzierung von Wartezeiten und Verbesserung der Developer Productivity
+    \item Aufbau von standardisierten Qualitäts- und Sicherheitsprüfungen in den CI/CD-Pipelines zur Sicherstellung robuster Software-Releases
+\end{itemize}
+
+\vspace{2em}
+
+\subsection*{DevOps / Platform Engineering, ARRI - Arnold \& Richter Cine Technik München}
+\textit{Juli 2022 - Juni 2024}
+\begin{itemize}[leftmargin=0.5cm]
+    % DevOps
+    \item Pflege und Erweiterung des Yocto-Projekts für das Hauptprodukt, einschließlich Upgrade auf die neueste LTS-Version
+    \item Umstrukturierung der Yocto-Metalayer und Bitbake-Recipes zur Wiederverwendbarkeit
+    \item Migration der Jenkins-Pipelines zu GitLab CI zur Verbesserung der Automatisierung und Effizienz
+    \item Containerisierung des CI/CD-Build-Prozesses und Einrichtung einer Docker-basierten Remote-Build-Umgebung für Entwickler
+    \item Dokumentation und Support für VS Code und Remote-Build-Container, um nahtlose Entwicklungsprozesse zu gewährleisten
+    \item Pflege und Erweiterung der CI/CD-Infrastruktur mit Ansible und Pulumi, Einsatz von GitOps für kontinuierliche Integration und Bereitstellung
+    \item Arbeiten im Team nach Kanban-Methoden, Förderung einer agilen und kollaborativen Arbeitsweise
+    % Platform
+    \item Planung und Mitgestaltung eines skalierbaren Plattformkonzepts für das gesamte Produktportfolio
+    \begin{itemize}
+        \item Entwicklung eines gemeinsamen Plattformkonzepts, das Teams ermöglicht, neue Produkte abzuleiten und autonom zu arbeiten
+        \item Erstellung von Templates und Guidelines, um die Selbstverwaltung von Produkten durch die Teams zu unterstützen
+        \item Konzeption und Einführung von Pulumi, um Entwicklern die selbstständige Einrichtung von Repositories und Benutzern in Artifactory und GitLab zu ermöglichen
+        \item Entwicklung wiederverwendbarer Module mit Dagger, um den Aufbau von GitLab CI-Pipelines zu vereinfachen, wie z.B. für KAS-Builds und QA-Checks (Coverity)
+    \end{itemize}
+\end{itemize}
+
+\newpage
+
+\subsection*{DevOps Engineering, Philips Medizin Systeme Böblingen}
+\textit{April 2021 - Juni 2022}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Einführung von DevOps-Methoden im MBSE-Bereich
+    \item Implementierung einer automatisierten Lösung zur Einpflege von Dokumentationen in den DHF, um die Effizienz und Robustheit zu erhöhen
+    \item Aufbau einer GitHub Actions Pipeline für ein Java-Plugin, um den automatisierten Build und die Verteilung an MBSE-Designer zu erleichtern
+    \item Entwicklung eines CLI-Tools zur Nutzung der Cameo REST API, um die Rollenstruktur zu analysieren und Benutzerzugriffsrechte neu zu ordnen
+    \item Analyse und Restrukturierung der Benutzerzugriffsrechte in Cameo, um sicherzustellen, dass nur autorisierte Benutzer Zugriff auf bestimmte Projekte haben
+    \item Remote-Einarbeitung und Anleitung eines Mitarbeiters, um die Nachhaltigkeit der neuen DevOps-Prozesse sicherzustellen
+    \item Migrationsplanung für das Cameo Systems Modeler Upgrade
+\end{itemize}
+
+\newpage
+
+\section*{Berufserfahrung}
+
+\subsection*{DevOps Architect, Philips Medizin Systeme Böblingen}
+\textit{Januar 2017 – November 2019}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Entwicklung einer CI/CD-Pipeline für Yocto-basierte Builds und Embedded Systeme
+    \item Förderung des DevOps-Mindsets im Team und strategische Planung eines DevOps-Konzepts für die Entwicklung eines regulierten Medizinprodukts
+    \item Standardisierung der verwendeten Tools, Programmiersprachen und Kommunikationsprotokolle für die DevOps-Tool-Entwicklung
+    \item Entwurf einer Microservice-Architektur für Entwicklung, Build und Test-Tooling
+    \item Implementierung von Infrastructure as Code (IaC) im Bereich R\&D
+    \item Vermittlung von Best Practices und Unterstützung neuer Softwareentwickler
+\end{itemize}
+\vspace{0.5cm}
+
+\subsection*{DevOps Engineer, Philips Medizin Systeme Böblingen}
+\textit{März 2014 – Oktober 2017}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Entwicklung einer CI/CD-Pipeline für Yocto-basierte Builds und Embedded Systeme
+    \item Konzeption und Umsetzung von Microservices in Go
+    \item Einrichtung und Verwaltung der CI/CD Infrastruktur bestehend aus GitLab und Docker Registry
+    \item Provisionierung der Infrastruktur mit Ansible
+\end{itemize}
+\vspace{0.5cm}
+
+\subsection*{Scrum Master/Coach, Philips Medizin Systeme Böblingen}
+\textit{März 2014 – Oktober 2017}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Einführung und Implementierung von Scrum in einem Pilotprojekt als erster Scrum Master bei Philips
+    \item Leitung eines Pilotteams zur Einführung von Scrum-Methoden und Sammlung erster Erfahrungen
+    \item Unterstützung und Coaching weiterer Teams bei der Einführung und Umsetzung von Scrum
+    \item Moderation von Sprint-Planungen, Daily Stand-Ups, Sprint Reviews und Retrospektiven
+    \item Förderung der agilen Kultur und kontinuierlichen Verbesserung innerhalb der Teams
+\end{itemize}
+\vspace{0.5cm}
+
+\subsection*{Embedded Systems Developer, Philips Medizin Systeme Böblingen}
+\textit{März 2006 – März 2014}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Einführung und Integration von Yocto für die Produktentwicklung, Aufbau des Yocto-Ökosystems
+    \item Entwicklung von Web-Applikationen (UI) mit REST-Schnittstellen für interne Tool-Entwicklung
+    \item Entwicklung einer Cross-Platform-Desktop-Applikation mit Python für externe Sprachen-Übersetzer
+    \item C++-Entwicklung für Embedded Realtime Applikationen
+    \item Datenbankentwicklung mit PostgreSQL und SQLite
+    \item Weiterentwicklung und Verbesserung des Build-Systems mit Make und CMake
+\end{itemize}
+
+
+\newpage
+\section*{Studium}
+
+\subsection*{Dipl. Ing. Softwaretechnik und Medieninformatik}
+\textit{Hochschule Esslingen, Abschluss: Februar 2006}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Diplomarbeit}: Verteiltes System für ein sicheres bargeldloses Bezahlverfahren über ein Mobiltelefon
+    \item \textbf{2. Praxissemester}: Philips Medizin Systeme, Embedded Linux Systems
+    \item \textbf{1. Praxissemester}: Daimler AG, Entwurf einer relationalen Datenbank
+\end{itemize}
+\vspace{0.5cm}
+
+\section*{IT-Security}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{Bug Bounty}: HackerOne (September 2020 - März 2021)
+    \item \textbf{Penetration Testing with Kali Linux (OSCP)}: Offensive Security (April 2020 - Oktober 2020)
+    \item \textbf{Web Application Security - Skytale Certified Professional (SCP)}: Skytale (Februar 2020 - März 2020)
+\end{itemize}
+\vspace{0.5cm}
+
+\section*{Sprachen}
+\begin{itemize}[leftmargin=0.5cm]
+    \item Deutsch (Muttersprache)
+    \item Englisch (Fließend)
+    \item Griechisch (Fließend)
+\end{itemize}
+\vspace{0.5cm}
+
+\section*{Interessen}
+\begin{itemize}[leftmargin=0.5cm]
+    \item IT-Security
+    \item Produktivitätsmethoden
+    \item Photographie
+    \item Kochen
+\end{itemize}
+\vspace{0.5cm}
+
+\section*{Soziale Netzwerke}
+\begin{itemize}[leftmargin=0.5cm]
+    \item LinkedIn: \url{https://www.linkedin.com/in/charemma}
+\end{itemize}
+
+\end{document}
