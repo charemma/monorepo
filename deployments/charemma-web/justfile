@@ -27,7 +27,7 @@ deploy:
         {{justfile_directory()}}/ {{VPS_USER}}@{{VPS_HOST}}:{{VPS_PATH}}/
 
     # Container neu starten
-    ssh {{VPS_USER}}@{{VPS_HOST}} "cd {{VPS_PATH}} && docker compose up -d"
+    ssh {{VPS_USER}}@{{VPS_HOST}} "docker stop caddy 2>/dev/null || true; docker rm caddy 2>/dev/null || true; docker run -d --name caddy --restart always -p 80:80 -p 443:443 -v {{VPS_PATH}}/Caddyfile:/etc/caddy/Caddyfile:ro -v {{VPS_PATH}}/html:/var/www/html:ro -v caddy_data:/data -v caddy_config:/config caddy:alpine"
 
     echo "Done! https://charemma.de"
 
@@ -43,16 +43,16 @@ sync:
 
 # Container Logs anzeigen
 logs:
-    ssh {{VPS_USER}}@{{VPS_HOST}} "cd {{VPS_PATH}} && docker compose logs -f"
+    ssh {{VPS_USER}}@{{VPS_HOST}} "docker logs -f caddy"
 
 # Container Status
 status:
-    ssh {{VPS_USER}}@{{VPS_HOST}} "cd {{VPS_PATH}} && docker compose ps"
+    ssh {{VPS_USER}}@{{VPS_HOST}} "docker ps -f name=caddy"
 
 # Container stoppen
 stop:
-    ssh {{VPS_USER}}@{{VPS_HOST}} "cd {{VPS_PATH}} && docker compose down"
+    ssh {{VPS_USER}}@{{VPS_HOST}} "docker stop caddy"
 
 # Container neustarten
 restart:
-    ssh {{VPS_USER}}@{{VPS_HOST}} "cd {{VPS_PATH}} && docker compose restart"
+    ssh {{VPS_USER}}@{{VPS_HOST}} "docker restart caddy"
