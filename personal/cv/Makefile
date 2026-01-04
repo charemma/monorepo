@@ -14,7 +14,7 @@ build-image:
 # Ziel zum Kompilieren des LaTeX-Dokuments
 $(PDF): clean $(TEX) build-image
 	rm -f $(PDF) *.aux *.log *.out *.toc *.lof *.lot
-	docker run --rm -v `pwd`:/data -w /data $(IMAGE) lualatex -d $(TEX)
+	docker run --rm -v `pwd`:/data -w /data $(IMAGE) lualatex $(TEX)
 
 # Ziel zum Bereinigen der erzeugten Dateien
 clean:
