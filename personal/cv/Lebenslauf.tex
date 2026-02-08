@@ -58,42 +58,85 @@
 \end{center}
 
 \section*{Profil}
-Platform Engineer mit Fokus auf Developer Experience und CI/CD. Ich baue interne Entwicklungsplattformen (Coder, DevContainers), automatisiere Build-Prozesse und kümmere mich um Infrastruktur als Code. Hintergrund in Embedded Linux (Yocto) und IT-Security.
+Platform Engineer und IT-Security Spezialist mit doppelter Expertise: Einerseits Konzeption und Betrieb skalierbarer Entwicklungsplattformen (DevOps, CI/CD), andererseits Security-Audits und Schwachstellenanalyse in komplexen Infrastrukturen. Die Kombination aus tiefem Infrastruktur-Verständnis und Offensive Security ermöglicht einen ganzheitlichen Blick auf sichere Systemarchitekturen.
 
 \vspace{0.5cm}
 \section*{Kenntnisse}
 \begin{itemize}[leftmargin=0.5cm]
-    \item \textbf{Platform/DevX}: Coder, DevContainers, GitHub Actions, GitLab CI
-    \item \textbf{IaC}: Pulumi, Ansible, Terraform
-    \item \textbf{Container}: Docker, Kubernetes, k3s
-    \item \textbf{Embedded}: Yocto, Buildroot, Bitbake
-    \item \textbf{Sprachen}: Python, Golang, Bash, C++
-    \item \textbf{Security}: OSCP Training, Bug Bounty, OWASP
+  \item \textbf{Platform Engineering (Architektur \& Konzepte)}: 
+        Interne Entwicklerplattformen, Self-Service-Modelle, 
+        Platform Operating Models, CI/CD- und Build-Architekturen,
+        Monorepo-Strategien, Governance in regulierten Umgebungen
+
+  \item \textbf{Developer Experience (Enablement \& Tooling)}: 
+        Coder, DevContainers, VS Code, 
+        GitHub Actions, GitLab CI, Dagger, 
+        CLI-Tooling (Just, Bash, Python, Go)
+
+  \item \textbf{Infrastructure as Code}: Pulumi, Terraform, Ansible, GitOps
+
+  \item \textbf{Container \& Orchestrierung}: Docker, Kubernetes, k3s
+
+  \item \textbf{Embedded Linux}: Yocto, BitBake, KAS
+
+  \item \textbf{Programmiersprachen}: Python, Go, Bash, C++
+
+  \item \textbf{IT-Security (Offensive Security)}:
+      OSCP (Offensive Security Certified Professional),
+      OSWE (in progress, seit Feb. 2026),
+      Burp Suite, Metasploit, nmap, sqlmap, Wireshark,
+      Fuzzing (wfuzz, ffuf), Privilege Escalation,
+      Web Application Security, Active Directory Attacks,
+      Responsible Disclosure (u.\,a. Bundeswehr),
+      Bug Bounty (HackerOne)
 \end{itemize}
+
 
 \section*{Freiberufliche Tätigkeit}
 
-\subsection*{Platform Engineering, Philips Medizin Systeme Böblingen}
-\textit{September 2024 - heute}
+\subsection*{Platform Engineering \& Security, Philips Medizin Systeme Böblingen}
+\textit{September 2024 - laufend}
 \begin{itemize}[leftmargin=0.5cm]
-    \item Build-Optimierung im Monorepo: Performance-Analyse, sparse-checkout und selektive Builds eingeführt
-    \item Justfile-basiertes Tooling für CLI-Workflows (Cross-Build, SDK-Management, QEMU), fehlende Dokumentation ergänzt
-    \item Remote-Entwicklungsplattform mit Coder auf k3s (IaC mit Pulumi und Ansible)
-    \item DevContainer-Modernisierung: Entkopplung von Yocto-SDK, leichtere Images
-    \item DevEx-Consulting: Platform Engineering Operating Model zur Stärkung der Team-Autonomie
+    \item Security-Audits interner Web-Applikationen und Docker-Container-Infrastruktur:
+    Schwachstellenanalyse (Authentication, Input Validation, Container-Security),
+    Erstellung detaillierter Hardening-Empfehlungen
+    (Base-Image-Auswahl, Least Privilege, Secrets Management)
+    \item Analyse und Optimierung eines großen Monorepos:
+    Einführung von sparse-checkout, selektiven Builds und Performance-Messungen
+    zur Reduktion von Build-Zeiten
+    \item Konzeption und Implementierung eines Justfile-basierten CLI-Toolings
+    für Cross-Builds, SDK-Management und QEMU-Workflows;
+    Konsolidierung und Ergänzung fehlender Dokumentation
+    \item Aufbau einer Remote-Entwicklungsplattform mit Coder auf k3s
+    unter Berücksichtigung hoher Sicherheitsanforderungen (regulierte Medizintechnik),
+    vollständig automatisiert mittels Infrastructure as Code (Pulumi, Ansible)
+    \item Modernisierung bestehender DevContainer-Setups durch Entkopplung
+    von Yocto-SDKs und signifikante Reduktion der Image-Größe
+    \item DevEx-Consulting:
+    Definition eines Platform-Engineering-Operating-Models
+    zur Stärkung von Team-Autonomie und Self-Service-Fähigkeiten
 \end{itemize}
 
 \vspace{0.5em}
 
-\subsection*{Platform Engineering, ARRI Cine Technik München}
+\subsection*{Platform Engineering \& Security, ARRI Cine Technik München}
 \textit{Juli 2022 - Juni 2024}
 \begin{itemize}[leftmargin=0.5cm]
-    \item Yocto-Projekt Pflege und LTS-Upgrade für professionelle Kamera-Systeme
-    \item Migration von Jenkins zu GitLab CI mit Docker-basierten Runnern
-    \item Remote-Build-Umgebung für Entwickler (Docker, VS Code Remote)
-    \item Plattformkonzept: Self-Service Provisionierung mit Pulumi (GitLab, Artifactory)
-    \item Wiederverwendbare CI-Module mit Dagger für KAS-Builds und QA
-    \item Ansible und GitOps für Infrastruktur-Management
+    \item Security-Reviews interner Web-Applikationen:
+    Schwachstellenanalyse (Authentication, Authorization, Input Validation),
+    Erstellung von Empfehlungen zur Risikominimierung
+    \item Pflege und Weiterentwicklung eines Yocto-basierten Embedded-Linux-Projekts
+    inklusive LTS-Upgrade für professionelle Kamera-Systeme
+    \item Migration von Jenkins zu GitLab CI
+    mit Docker-basierten Runnern und reproduzierbaren Build-Pipelines
+    \item Konzeption und Einführung einer Remote-Build- und Entwicklungsumgebung
+    für Entwickler (Docker, VS Code Remote)
+    \item Aufbau eines Self-Service-Plattformkonzepts mit Pulumi
+    (u.\,a. GitLab- und Artifactory-Provisionierung)
+    \item Entwicklung wiederverwendbarer CI-Module mit Dagger
+    für KAS-Builds und Quality-Assurance-Workflows
+    \item Infrastruktur-Management nach GitOps-Prinzipien
+    unter Einsatz von Ansible
 \end{itemize}
 
 \vspace{0.5em}
@@ -101,13 +144,18 @@ Platform Engineer mit Fokus auf Developer Experience und CI/CD. Ich baue interne
 \subsection*{DevOps Engineering, Philips Medizin Systeme Böblingen}
 \textit{April 2021 - Juni 2022}
 \begin{itemize}[leftmargin=0.5cm]
-    \item DevOps-Einführung im Model-Based Systems Engineering (MBSE)
-    \item GitHub Actions Pipeline für Java-Plugin Distribution
-    \item CLI-Tool für Cameo REST API (Benutzer- und Rechteverwaltung)
-    \item Remote-Einarbeitung und Wissenstransfer
+    \item Einführung von DevOps-Prinzipien im Umfeld
+    des Model-Based Systems Engineering (MBSE)
+    \item Aufbau einer GitHub-Actions-Pipeline
+    zur Distribution von Java-Plugins
+    \item Entwicklung eines CLI-Tools zur Benutzer- und Rechteverwaltung
+    über die Cameo-REST-API
+    \item Unterstützung verteilter Teams durch strukturierte
+    Remote-Einarbeitung und Wissenstransfer
 \end{itemize}
 
-\section*{Berufserfahrung (Festanstellung)}
+
+\section*{Berufserfahrung}
 
 \subsection*{Philips Medizin Systeme Böblingen}
 \textit{März 2006 - November 2019}
@@ -136,8 +184,14 @@ Platform Engineer mit Fokus auf Developer Experience und CI/CD. Ich baue interne
 \section*{Studium}
 \textbf{Dipl. Ing. Softwaretechnik und Medieninformatik}, Hochschule Esslingen (2006)
 
-\section*{IT-Security}
-OSCP Training (Offensive Security), Web Application Security (SCP), Bug Bounty (HackerOne)
+\section*{IT-Security Zertifizierungen \& Aktivitäten}
+\begin{itemize}[leftmargin=0.5cm]
+    \item \textbf{OSCP} (Offensive Security Certified Professional) - bestanden im ersten Versuch (2020)
+    \item \textbf{OSWE} (Offensive Security Web Expert) - in Bearbeitung (seit Februar 2026)
+    \item \textbf{Web Application Security - SCP} (Skytale Certified Professional, 2020)
+    \item \textbf{Bug Bounty}: HackerOne (2020-2021)
+    \item \textbf{Responsible Disclosure}: u.\,a. Bundeswehr (mit offizieller Anerkennung)
+\end{itemize}
 
 \section*{Sprachen}
 Deutsch (Muttersprache), Englisch (Fließend), Griechisch (Fließend)
